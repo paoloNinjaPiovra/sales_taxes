@@ -2,3 +2,6 @@
 .gitignore
 target/generated-sources/
 target/generated-test-sources/
+/.idea/
+/salesTaxes.iml
+/target/
