@@ -8,6 +8,7 @@ import com.sales.taxes.model.RecipeOutput;
 import org.junit.Test;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,11 +24,13 @@ public class AppTest
     public void testInput1() {
         Calculate calculate = new Calculate();
         RecipeOutput recipeOutput = calculate.calculate("input1");
+        System.out.println("Output 1:");
         System.out.println(recipeOutput.toString());
+        System.out.println();
         RecipeOutput output1 = getOutput1();
 
-        assertEquals(output1.getSalesTaxes(), recipeOutput.getSalesTaxes());
-        assertEquals(output1.getTotal(), recipeOutput.getTotal());
+        assertEquals(output1.getSalesTaxes().floatValue(), recipeOutput.getSalesTaxes().floatValue(), 0);
+        assertEquals(output1.getTotal().floatValue(), recipeOutput.getTotal().floatValue(), 0);
         int output1Size = output1.getArticles().size();
         int recipeOutputSize = recipeOutput.getArticles().size();
         assertEquals(output1Size, recipeOutputSize);
@@ -36,7 +39,12 @@ public class AppTest
         Article recipeOutputList[] = new Article[recipeOutputSize];
         recipeOutputList = output1.getArticles().toArray(recipeOutputList);
         for (int i = 0; i < recipeOutputSize; i++) {
-            assertEquals(output1List[i], recipeOutputList[i]);
+            if ((Object) output1List[i] instanceof BigDecimal) {
+                BigDecimal output1ListBd = (BigDecimal) ((Object) output1List[i]);
+                BigDecimal recipeOutputListBd = (BigDecimal) ((Object)recipeOutputList[i]);
+                assertEquals(output1ListBd.floatValue(), recipeOutputListBd.floatValue(), 0);
+            } else
+                assertEquals(output1List[i], recipeOutputList[i]);
         }
     }
 
@@ -44,20 +52,27 @@ public class AppTest
     public void testInput2() {
         Calculate calculate = new Calculate();
         RecipeOutput recipeOutput = calculate.calculate("input2");
+        System.out.println("Output 2:");
         System.out.println(recipeOutput.toString());
+        System.out.println();
         RecipeOutput output2 = getOutput2();
 
-        assertEquals(output2.getSalesTaxes(), recipeOutput.getSalesTaxes());
-        assertEquals(output2.getTotal(), recipeOutput.getTotal());
+        assertEquals(output2.getSalesTaxes().floatValue(), recipeOutput.getSalesTaxes().floatValue(), 0);
+        assertEquals(output2.getTotal().floatValue(), recipeOutput.getTotal().floatValue(), 0);
         int output1Size = output2.getArticles().size();
         int recipeOutputSize = recipeOutput.getArticles().size();
         assertEquals(output1Size, recipeOutputSize);
-        Article output1List[] = new Article[output1Size];
-        output1List = output2.getArticles().toArray(output1List);
+        Article output2List[] = new Article[output1Size];
+        output2List = output2.getArticles().toArray(output2List);
         Article recipeOutputList[] = new Article[recipeOutputSize];
         recipeOutputList = output2.getArticles().toArray(recipeOutputList);
         for (int i = 0; i < recipeOutputSize; i++) {
-            assertEquals(output1List[i], recipeOutputList[i]);
+            if ((Object) output2List[i] instanceof BigDecimal) {
+                BigDecimal output1ListBd = (BigDecimal) ((Object) output2List[i]);
+                BigDecimal recipeOutputListBd = (BigDecimal) ((Object)recipeOutputList[i]);
+                assertEquals(output1ListBd.floatValue(), recipeOutputListBd.floatValue(), 0);
+            } else
+                assertEquals(output2List[i], recipeOutputList[i]);
         }
     }
 
@@ -65,20 +80,27 @@ public class AppTest
     public void testInput3() {
         Calculate calculate = new Calculate();
         RecipeOutput recipeOutput = calculate.calculate("input3");
+        System.out.println("Output 3:");
         System.out.println(recipeOutput.toString());
+        System.out.println();
         RecipeOutput output3 = getOutput3();
 
-        assertEquals(output3.getSalesTaxes(), recipeOutput.getSalesTaxes());
-        assertEquals(output3.getTotal(), recipeOutput.getTotal());
+        assertEquals(output3.getSalesTaxes().floatValue(), recipeOutput.getSalesTaxes().floatValue(), 0);
+        assertEquals(output3.getTotal().floatValue(), recipeOutput.getTotal().floatValue(), 0);
         int output1Size = output3.getArticles().size();
         int recipeOutputSize = recipeOutput.getArticles().size();
         assertEquals(output1Size, recipeOutputSize);
-        Article output1List[] = new Article[output1Size];
-        output1List = output3.getArticles().toArray(output1List);
+        Article output3List[] = new Article[output1Size];
+        output3List = output3.getArticles().toArray(output3List);
         Article recipeOutputList[] = new Article[recipeOutputSize];
         recipeOutputList = output3.getArticles().toArray(recipeOutputList);
         for (int i = 0; i < recipeOutputSize; i++) {
-            assertEquals(output1List[i], recipeOutputList[i]);
+            if ((Object) output3List[i] instanceof BigDecimal) {
+                BigDecimal output1ListBd = (BigDecimal) ((Object) output3List[i]);
+                BigDecimal recipeOutputListBd = (BigDecimal) ((Object)recipeOutputList[i]);
+                assertEquals(output1ListBd.floatValue(), recipeOutputListBd.floatValue(), 0);
+            } else
+                assertEquals(output3List[i], recipeOutputList[i]);
         }
     }
 
@@ -96,7 +118,7 @@ public class AppTest
         BigDecimal start = calculate.round(BigDecimal.valueOf(0.56));
         BigDecimal end = BigDecimal.valueOf(0.60);
 
-        assertEquals(start, end);
+        assertEquals(start.floatValue(), end.floatValue(), 0);
     }
 
     public RecipeOutput getOutput1() {

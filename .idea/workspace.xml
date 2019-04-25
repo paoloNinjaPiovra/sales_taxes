@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3c4973f-483b-47db-a947-9110131df50f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sales/taxes/component/Calculate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sales/taxes/component/Calculate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sales/taxes/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sales/taxes/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/sales/taxes/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sales/taxes/AppTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,8 +21,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/sales/taxes/AppTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="64" column="21" lean-forward="true" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="26" />
+            <state relative-caret-position="176">
+              <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="28" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sales/taxes/App.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -45,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sales/taxes/component/Calculate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
+            <state relative-caret-position="159">
+              <caret line="47" column="39" lean-forward="true" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
               <folding>
                 <element signature="e#1352#1353#0" expanded="true" />
                 <element signature="e#1380#1381#0" expanded="true" />
@@ -76,8 +88,9 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/test/java/com/sales/taxes/AppTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sales/taxes/component/Calculate.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/sales/taxes/AppTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sales/taxes/App.java" />
       </list>
     </option>
   </component>
@@ -85,6 +98,7 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="295" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
@@ -182,7 +196,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/pom.xml&#10;/Users/paolofasoli/Projects/sales_taxes/src/main/java/com/sales/taxes/salesTaxes/SalesTaxesApplication.java" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resource" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -206,7 +220,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AppTest">
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sales.taxes.App" />
+      <module name="salesTaxes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sales.taxes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="salesTaxes" />
       <extension name="coverage">
@@ -254,7 +281,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.testInput3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="com.sales.taxes in salesTaxes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="salesTaxes" />
       <extension name="coverage">
         <pattern>
@@ -263,25 +290,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.sales.taxes" />
-      <option name="MAIN_CLASS_NAME" value="com.sales.taxes.AppTest" />
-      <option name="METHOD_NAME" value="testInput3" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AppTest.testRound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="salesTaxes" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sales.taxes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.sales.taxes" />
-      <option name="MAIN_CLASS_NAME" value="com.sales.taxes.AppTest" />
-      <option name="METHOD_NAME" value="testRound" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -321,11 +330,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.com.sales.taxes in salesTaxes" />
         <item itemvalue="JUnit.AppTest" />
-        <item itemvalue="JUnit.AppTest.testInput3" />
-        <item itemvalue="JUnit.AppTest.testRound" />
-        <item itemvalue="JUnit.AppTest.testInput2" />
         <item itemvalue="JUnit.AppTest.testInput1" />
+        <item itemvalue="JUnit.AppTest.testInput2" />
       </list>
     </recent_temporary>
   </component>
@@ -341,7 +350,7 @@
       <updated>1556111729778</updated>
       <workItem from="1556111731157" duration="1709000" />
       <workItem from="1556114872790" duration="473000" />
-      <workItem from="1556186795454" duration="5142000" />
+      <workItem from="1556186795454" duration="6882000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1556187015501</created>
@@ -368,42 +377,42 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AppTest_testRound - 2019.04.25 at 17h 14m 38s.xml">
-      <configuration name="AppTest.testRound" configurationId="JUnit" />
+    <history-entry file="AppTest_testInput1 - 2019.04.25 at 17h 46m 05s.xml">
+      <configuration name="AppTest.testInput1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest_testRound - 2019.04.25 at 17h 14m 43s.xml">
-      <configuration name="AppTest.testRound" configurationId="JUnit" />
+    <history-entry file="AppTest_testInput1 - 2019.04.25 at 17h 46m 30s.xml">
+      <configuration name="AppTest.testInput1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest_testRound - 2019.04.25 at 17h 15m 17s.xml">
-      <configuration name="AppTest.testRound" configurationId="JUnit" />
+    <history-entry file="AppTest_testInput1 - 2019.04.25 at 17h 53m 44s.xml">
+      <configuration name="AppTest.testInput1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest_testInput3 - 2019.04.25 at 17h 15m 42s.xml">
-      <configuration name="AppTest.testInput3" configurationId="JUnit" />
+    <history-entry file="AppTest_testInput1 - 2019.04.25 at 17h 58m 50s.xml">
+      <configuration name="AppTest.testInput1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest_testRound - 2019.04.25 at 17h 16m 27s.xml">
-      <configuration name="AppTest.testRound" configurationId="JUnit" />
+    <history-entry file="AppTest_testInput1 - 2019.04.25 at 17h 59m 18s.xml">
+      <configuration name="AppTest.testInput1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest_testRound - 2019.04.25 at 17h 17m 45s.xml">
-      <configuration name="AppTest.testRound" configurationId="JUnit" />
+    <history-entry file="AppTest_testInput1 - 2019.04.25 at 18h 00m 19s.xml">
+      <configuration name="AppTest.testInput1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest_testInput3 - 2019.04.25 at 17h 18m 01s.xml">
-      <configuration name="AppTest.testInput3" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AppTest_testInput3 - 2019.04.25 at 17h 19m 14s.xml">
-      <configuration name="AppTest.testInput3" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AppTest - 2019.04.25 at 17h 19m 28s.xml">
+    <history-entry file="AppTest - 2019.04.25 at 18h 01m 49s.xml">
       <configuration name="AppTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest - 2019.04.25 at 17h 23m 11s.xml">
+    <history-entry file="AppTest - 2019.04.25 at 18h 02m 28s.xml">
+      <configuration name="AppTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest - 2019.04.25 at 18h 03m 51s.xml">
+      <configuration name="AppTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest - 2019.04.25 at 18h 05m 20s.xml">
       <configuration name="AppTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7324000" />
+    <option name="totallyTimeSpent" value="9064000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <frame x="295" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20171674" />
@@ -455,9 +464,9 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/sales/taxes/AppTest.java</url>
-          <line>98</line>
+          <line>42</line>
           <properties />
-          <option name="timeStamp" value="5" />
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -586,13 +595,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/sales/taxes/AppTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="64" column="21" lean-forward="true" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/math/RoundingMode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
@@ -602,11 +604,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sales/taxes/component/Calculate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
+        <state relative-caret-position="159">
+          <caret line="47" column="39" lean-forward="true" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
           <folding>
             <element signature="e#1352#1353#0" expanded="true" />
             <element signature="e#1380#1381#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sales/taxes/model/Article.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/sales/taxes/AppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="28" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sales/taxes/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
