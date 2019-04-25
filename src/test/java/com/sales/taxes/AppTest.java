@@ -26,7 +26,7 @@ public class AppTest
         System.out.println(recipeOutput.toString());
         RecipeOutput output1 = getOutput1();
 
-        /*assertEquals(output1.getSalesTaxes(), recipeOutput.getSalesTaxes());
+        assertEquals(output1.getSalesTaxes(), recipeOutput.getSalesTaxes());
         assertEquals(output1.getTotal(), recipeOutput.getTotal());
         int output1Size = output1.getArticles().size();
         int recipeOutputSize = recipeOutput.getArticles().size();
@@ -37,7 +37,7 @@ public class AppTest
         recipeOutputList = output1.getArticles().toArray(recipeOutputList);
         for (int i = 0; i < recipeOutputSize; i++) {
             assertEquals(output1List[i], recipeOutputList[i]);
-        }*/
+        }
     }
 
     @Test
@@ -47,7 +47,7 @@ public class AppTest
         System.out.println(recipeOutput.toString());
         RecipeOutput output2 = getOutput2();
 
-        /*assertEquals(output2.getSalesTaxes(), recipeOutput.getSalesTaxes());
+        assertEquals(output2.getSalesTaxes(), recipeOutput.getSalesTaxes());
         assertEquals(output2.getTotal(), recipeOutput.getTotal());
         int output1Size = output2.getArticles().size();
         int recipeOutputSize = recipeOutput.getArticles().size();
@@ -58,7 +58,7 @@ public class AppTest
         recipeOutputList = output2.getArticles().toArray(recipeOutputList);
         for (int i = 0; i < recipeOutputSize; i++) {
             assertEquals(output1List[i], recipeOutputList[i]);
-        }*/
+        }
     }
 
     @Test
@@ -68,7 +68,7 @@ public class AppTest
         System.out.println(recipeOutput.toString());
         RecipeOutput output3 = getOutput3();
 
-        /*assertEquals(output3.getSalesTaxes(), recipeOutput.getSalesTaxes());
+        assertEquals(output3.getSalesTaxes(), recipeOutput.getSalesTaxes());
         assertEquals(output3.getTotal(), recipeOutput.getTotal());
         int output1Size = output3.getArticles().size();
         int recipeOutputSize = recipeOutput.getArticles().size();
@@ -79,7 +79,7 @@ public class AppTest
         recipeOutputList = output3.getArticles().toArray(recipeOutputList);
         for (int i = 0; i < recipeOutputSize; i++) {
             assertEquals(output1List[i], recipeOutputList[i]);
-        }*/
+        }
     }
 
     @Test
@@ -90,13 +90,13 @@ public class AppTest
         assertTrue(null != articles && !articles.isEmpty());
     }
 
-    //@Test
+    @Test
     public void testRound() {
         Calculate calculate = new Calculate();
-        BigDecimal start = BigDecimal.valueOf(11.8125);
-        BigDecimal end = BigDecimal.valueOf(11.85);
+        BigDecimal start = calculate.round(BigDecimal.valueOf(0.56));
+        BigDecimal end = BigDecimal.valueOf(0.60);
 
-        //assertEquals(calculate.round(start), end);
+        assertEquals(start, end);
     }
 
     public RecipeOutput getOutput1() {

@@ -40,46 +40,60 @@ public class Calculate {
         return recipeOutput;
     }
 
+    public BigDecimal scale(BigDecimal number) {
+        return number.setScale(2, RoundingMode.DOWN);
+    }
+
+    public BigDecimal adder(BigDecimal number1, BigDecimal number2) {
+        BigDecimal sum = number1.add(number2);
+        return scale(sum);
+    }
+
     public BigDecimal round(BigDecimal number) {
-        Double tmp = Math.round(number.doubleValue() * 20.0) / 20.0 ;
-        return BigDecimal.valueOf(tmp);
+        double round = Math.ceil(number.doubleValue() / 0.05d) * 0.05d;
+        return scale(BigDecimal.valueOf(round));
     }
 
     public void sumSalesTaxes(RecipeOutput recipeOutput, Article articleOutput) {
-        recipeOutput.setSalesTaxes(recipeOutput.getSalesTaxes().add(articleOutput.getSalesTaxes()));
+        BigDecimal salesTaxes = adder(recipeOutput.getSalesTaxes(), articleOutput.getSalesTaxes());
+        recipeOutput.setSalesTaxes(salesTaxes);
     }
 
     public void sumTotal(RecipeOutput recipeOutput, Article articleOutput) {
-        recipeOutput.setTotal(recipeOutput.getTotal().add(articleOutput.getCost()));
+        BigDecimal total = adder(recipeOutput.getTotal(), articleOutput.getCost());
+        recipeOutput.setTotal(total);
     }
 
     public Article calculateArticleOutput(Article articleOutput, Integer taxRate) {
         BigDecimal salesTaxes = calculateSalesTaxes(articleOutput, taxRate);
-        articleOutput.setCost(articleOutput.getCost().add(salesTaxes));
+        BigDecimal cost = adder(articleOutput.getCost(), salesTaxes);
+        articleOutput.setCost(cost);
         articleOutput.setSalesTaxes(salesTaxes);
         return articleOutput;
     }
 
     public BigDecimal calculateSalesTaxes(Article articleOutput, Integer taxRate) {
-        return round(articleOutput.getCost().multiply(BigDecimal.valueOf(taxRate)).divide(BigDecimal.valueOf(100)).setScale(2, RoundingMode.UP));
+        BigDecimal tax = articleOutput.getCost().multiply(BigDecimal.valueOf(taxRate)).divide(BigDecimal.valueOf(100));
+        BigDecimal roundedTax = round(tax);
+        return scale(roundedTax);
     }
 
-    public Article taxImported(Article article) { //15%
+    public Article taxImported(Article article) {
         Article articleOutput = article;
-        return (calculateArticleOutput(articleOutput, 15));
+        return calculateArticleOutput(articleOutput, 15);
     }
 
-    public Article taxNotImported(Article article) { //10%
+    public Article taxNotImported(Article article) {
         Article articleOutput = article;
-        return (calculateArticleOutput(articleOutput, 10));
+        return calculateArticleOutput(articleOutput, 10);
     }
 
-    public Article noTaxImported(Article article) { //5%
+    public Article noTaxImported(Article article) {
         Article articleOutput = article;
-        return (calculateArticleOutput(articleOutput, 5));
+        return calculateArticleOutput(articleOutput, 5);
     }
 
-    public Article noTaxNotImported(Article article) { //0%
+    public Article noTaxNotImported(Article article) {
         Article articleOutput = article;
         return articleOutput;
     }
