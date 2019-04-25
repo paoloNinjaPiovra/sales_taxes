@@ -4,6 +4,7 @@ import com.sales.taxes.component.ArticleBuilder;
 import com.sales.taxes.component.Calculate;
 import com.sales.taxes.component.FileReader;
 import com.sales.taxes.enums.TaxStatus;
+import com.sales.taxes.exceptions.SalesTaxesCalculationException;
 import com.sales.taxes.model.Article;
 import com.sales.taxes.model.RecipeOutput;
 import org.junit.Test;
@@ -21,7 +22,7 @@ import static org.junit.Assert.*;
 public class AppTest 
 {
     @Test
-    public void testInput1() {
+    public void testInput1() throws SalesTaxesCalculationException {
         Calculate calculate = new Calculate();
         RecipeOutput recipeOutput = calculate.calculate("input1");
         System.out.println("Output 1:");
@@ -49,7 +50,7 @@ public class AppTest
     }
 
     @Test
-    public void testInput2() {
+    public void testInput2() throws SalesTaxesCalculationException {
         Calculate calculate = new Calculate();
         RecipeOutput recipeOutput = calculate.calculate("input2");
         System.out.println("Output 2:");
@@ -77,7 +78,7 @@ public class AppTest
     }
 
     @Test
-    public void testInput3() {
+    public void testInput3() throws SalesTaxesCalculationException {
         Calculate calculate = new Calculate();
         RecipeOutput recipeOutput = calculate.calculate("input3");
         System.out.println("Output 3:");
@@ -113,7 +114,7 @@ public class AppTest
     }
 
     @Test
-    public void testRound() {
+    public void testRound() throws SalesTaxesCalculationException {
         Calculate calculate = new Calculate();
         BigDecimal start = calculate.round(BigDecimal.valueOf(0.56));
         BigDecimal end = BigDecimal.valueOf(0.60);
@@ -253,7 +254,7 @@ public class AppTest
     }
 
     @Test
-    public void testScale(){
+    public void testScale() throws SalesTaxesCalculationException {
         Calculate calculate = new Calculate();
         BigDecimal number = new BigDecimal(1234.34569999999999999999999);
         BigDecimal number1 = new BigDecimal(1234.34);
@@ -262,7 +263,7 @@ public class AppTest
     }
 
     @Test
-    public void testAdder(){
+    public void testAdder() throws SalesTaxesCalculationException {
         Calculate calculate = new Calculate();
         BigDecimal number = new BigDecimal(1234.34);
         BigDecimal number1 = new BigDecimal(1234.34);
@@ -272,7 +273,7 @@ public class AppTest
     }
 
     @Test
-    public void testCalculateSalesTaxes() {
+    public void testCalculateSalesTaxes() throws SalesTaxesCalculationException {
         Calculate calculate = new Calculate();
         Article articleOutput = new Article();
         articleOutput.setCost(BigDecimal.valueOf(11.25));

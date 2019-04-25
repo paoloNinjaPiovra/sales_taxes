@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d3c4973f-483b-47db-a947-9110131df50f" name="Default Changelist" comment="">
+    <list default="true" id="d3c4973f-483b-47db-a947-9110131df50f" name="Default Changelist" comment="first commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sales/taxes/exceptions/SalesTaxesArticleException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sales/taxes/exceptions/SalesTaxesCalculationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sales/taxes/exceptions/SalesTaxesException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sales/taxes/exceptions/SalesTaxesFileReadException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/salesTaxes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/salesTaxes.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sales/taxes/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sales/taxes/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sales/taxes/component/ArticleBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sales/taxes/component/ArticleBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sales/taxes/component/Calculate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sales/taxes/component/Calculate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sales/taxes/component/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sales/taxes/component/FileReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/sales/taxes/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sales/taxes/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/salesTaxes-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.sales.taxes.AppTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.sales.taxes.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sales/taxes/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sales/taxes/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sales/taxes/component/ArticleBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sales/taxes/component/ArticleBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sales/taxes/component/Calculate$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sales/taxes/component/Calculate$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sales/taxes/component/Calculate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sales/taxes/component/Calculate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sales/taxes/component/FileReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sales/taxes/component/FileReader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/sales/taxes/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/sales/taxes/AppTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -27,43 +33,120 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.7124183">
-      <split-first>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/test/java/com/sales/taxes/AppTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="226">
-                  <caret line="281" column="4" selection-start-line="281" selection-start-column="4" selection-end-line="281" selection-end-column="4" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/resources/input1">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/sales/taxes/component/Calculate.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="663">
-                  <caret line="74" column="41" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="41" />
-                  <folding>
-                    <element signature="e#1352#1353#0" expanded="true" />
-                    <element signature="e#1412#1413#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sales/taxes/component/ArticleBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sales/taxes/component/FileReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sales/taxes/App.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="11" column="25" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/sales/taxes/AppTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="275" column="79" selection-start-line="275" selection-start-column="79" selection-end-line="275" selection-end-column="79" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sales/taxes/component/Calculate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sales/taxes/exceptions/SalesTaxesCalculationException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="32">
+              <caret line="2" column="71" selection-start-line="2" selection-start-column="71" selection-end-line="2" selection-end-column="71" />
+              <folding>
+                <element signature="e#169#170#0" expanded="true" />
+                <element signature="e#199#200#0" expanded="true" />
+                <element signature="e#259#260#0" expanded="true" />
+                <element signature="e#296#297#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sales/taxes/exceptions/SalesTaxesArticleException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="64">
+              <caret line="4" selection-start-line="4" selection-end-line="6" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sales/taxes/exceptions/SalesTaxesException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="32">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sales/taxes/exceptions/SalesTaxesFileReadException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="32">
+              <caret line="2" column="68" selection-start-line="2" selection-start-column="68" selection-end-line="2" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sales/taxes/model/Article.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -73,6 +156,7 @@
       <find>HALF_</find>
       <find>build</find>
       <find>cobertura-maven-plugin</find>
+      <find>testR</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -82,12 +166,19 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sales/taxes/component/Calculate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sales/taxes/App.java" />
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/sales/taxes/model/Article.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sales/taxes/exceptions/SalesTaxesCalculationArticleException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sales/taxes/component/FileReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sales/taxes/exceptions/SalesTaxesException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sales/taxes/exceptions/SalesTaxesArticleException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sales/taxes/exceptions/SalesTaxesCalculationException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sales/taxes/exceptions/SalesTaxesFileReadException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sales/taxes/component/Calculate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sales/taxes/App.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/sales/taxes/AppTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sales/taxes/component/ArticleBuilder.java" />
       </list>
     </option>
   </component>
@@ -187,7 +278,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="taxes" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sales_taxes" type="b2602c69:ProjectViewProjectNode" />
@@ -236,6 +327,9 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sales.taxes.exceptions" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resource" />
       <recent name="$PROJECT_DIR$" />
@@ -254,6 +348,19 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.AppTest">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sales.taxes.App" />
+      <module name="salesTaxes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sales.taxes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="salesTaxes" />
       <extension name="coverage">
@@ -269,7 +376,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.testAdder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppTest.testArticleBuilder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="salesTaxes" />
       <extension name="coverage">
         <pattern>
@@ -279,7 +386,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.sales.taxes" />
       <option name="MAIN_CLASS_NAME" value="com.sales.taxes.AppTest" />
-      <option name="METHOD_NAME" value="testAdder" />
+      <option name="METHOD_NAME" value="testArticleBuilder" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -301,7 +408,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.testRead" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppTest.testInput1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="salesTaxes" />
       <extension name="coverage">
         <pattern>
@@ -311,23 +418,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.sales.taxes" />
       <option name="MAIN_CLASS_NAME" value="com.sales.taxes.AppTest" />
-      <option name="METHOD_NAME" value="testRead" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AppTest.testScale" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="salesTaxes" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sales.taxes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.sales.taxes" />
-      <option name="MAIN_CLASS_NAME" value="com.sales.taxes.AppTest" />
-      <option name="METHOD_NAME" value="testScale" />
+      <option name="METHOD_NAME" value="testInput1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -369,10 +460,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.AppTest" />
+        <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.AppTest.testArticleBuilder" />
+        <item itemvalue="JUnit.AppTest.testInput1" />
         <item itemvalue="JUnit.AppTest.testCalculateSalesTaxes" />
-        <item itemvalue="JUnit.AppTest.testAdder" />
-        <item itemvalue="JUnit.AppTest.testScale" />
-        <item itemvalue="JUnit.AppTest.testRead" />
       </list>
     </recent_temporary>
   </component>
@@ -388,7 +479,7 @@
       <updated>1556111729778</updated>
       <workItem from="1556111731157" duration="1709000" />
       <workItem from="1556114872790" duration="473000" />
-      <workItem from="1556186795454" duration="14222000" />
+      <workItem from="1556186795454" duration="18367000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1556187015501</created>
@@ -415,15 +506,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AppTest_testArticleBuilder - 2019.04.25 at 20h 47m 39s.xml">
-      <configuration name="AppTest.testArticleBuilder" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AppTest_testArticleBuilder - 2019.04.25 at 20h 48m 16s.xml">
-      <configuration name="AppTest.testArticleBuilder" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AppTest_testRead - 2019.04.25 at 20h 55m 17s.xml">
-      <configuration name="AppTest.testRead" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AppTest_testRead - 2019.04.25 at 21h 01m 03s.xml">
       <configuration name="AppTest.testRead" configurationId="JUnit" />
     </history-entry>
@@ -445,15 +527,24 @@
     <history-entry file="AppTest_testCalculateSalesTaxes - 2019.04.25 at 21h 13m 27s.xml">
       <configuration name="AppTest.testCalculateSalesTaxes" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AppTest - 2019.04.25 at 21h 14m 08s.xml">
+      <configuration name="AppTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest - 2019.04.25 at 21h 24m 39s.xml">
+      <configuration name="AppTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_testArticleBuilder - 2019.04.25 at 21h 26m 09s.xml">
+      <configuration name="AppTest.testArticleBuilder" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16404000" />
+    <option name="totallyTimeSpent" value="20549000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20171674" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20171674" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -464,7 +555,7 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25987262" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.25987262" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -496,18 +587,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <option name="LAST_COMMIT_MESSAGE" value="first commit" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/sales/taxes/AppTest.java</url>
-          <line>42</line>
-          <properties />
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -630,69 +709,105 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/input1">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sales/taxes/model/RecipeOutput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sales/taxes/model/Article.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sales/taxes/exceptions/SalesTaxesFileReadException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="68" selection-start-line="2" selection-start-column="68" selection-end-line="2" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sales/taxes/exceptions/SalesTaxesException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sales/taxes/exceptions/SalesTaxesCalculationException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="71" selection-start-line="2" selection-start-column="71" selection-end-line="2" selection-end-column="71" />
+          <folding>
+            <element signature="e#169#170#0" expanded="true" />
+            <element signature="e#199#200#0" expanded="true" />
+            <element signature="e#259#260#0" expanded="true" />
+            <element signature="e#296#297#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sales/taxes/exceptions/SalesTaxesArticleException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" selection-start-line="4" selection-end-line="6" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sales/taxes/component/Calculate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/sales/taxes/AppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="275" column="79" selection-start-line="275" selection-start-column="79" selection-end-line="275" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sales/taxes/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+        <state relative-caret-position="176">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sales/taxes/component/FileReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1344">
-          <caret line="84" column="10" selection-start-line="84" selection-start-column="10" selection-end-line="84" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sales/taxes/model/RecipeOutput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sales/taxes/model/Article.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="42" column="44" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="44" />
+        <state relative-caret-position="173">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sales/taxes/component/ArticleBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/input1">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sales/taxes/component/FileReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sales/taxes/component/Calculate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="74" column="41" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="41" />
+        <state relative-caret-position="242">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
           <folding>
-            <element signature="e#1352#1353#0" expanded="true" />
-            <element signature="e#1412#1413#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/sales/taxes/AppTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="281" column="4" selection-start-line="281" selection-start-column="4" selection-end-line="281" selection-end-column="4" />
         </state>
       </provider>
     </entry>

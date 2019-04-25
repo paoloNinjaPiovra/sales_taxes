@@ -1,21 +1,26 @@
 package com.sales.taxes.component;
 
+import com.sales.taxes.exceptions.SalesTaxesFileReadException;
 import com.sales.taxes.model.Article;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class FileReader {
 
     public List<Article> read(String name) {
-        BufferedReader reader;
-        ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(classLoader.getResource(name).getFile());
-        List<Article> aritcles = new ArrayList<>();
         try {
+            BufferedReader reader;
+            ClassLoader classLoader = getClass().getClassLoader();
+            File file = new File(classLoader.getResource(name).getFile());
+
+            if (null == file)
+                throw new SalesTaxesFileReadException("File not found");
+
+            List<Article> aritcles = new ArrayList<>();
+
             reader = new BufferedReader(new java.io.FileReader(file.getAbsolutePath()));
             String line = reader.readLine();
             ArticleBuilder lineParser = new ArticleBuilder();
@@ -26,8 +31,8 @@ public class FileReader {
             }
             reader.close();
             return aritcles;
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            System.out.println(e);
             return null;
         }
     }
