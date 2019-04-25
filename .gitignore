@@ -5,3 +5,4 @@ target/generated-test-sources/
 /.idea/
 /salesTaxes.iml
 /target/
+.DS_Store
