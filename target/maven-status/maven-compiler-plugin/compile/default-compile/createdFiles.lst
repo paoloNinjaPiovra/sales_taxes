@@ -1,9 +1,0 @@
-com/sales/taxes/App.class
-com/sales/taxes/model/Article.class
-com/sales/taxes/enums/TaxStatus.class
-com/sales/taxes/component/FileReader.class
-com/sales/taxes/component/ArticleBuilder.class
-com/sales/taxes/component/Calculate$1.class
-com/sales/taxes/component/Calculate.class
-com/sales/taxes/enums/TaxFree.class
-com/sales/taxes/model/RecipeOutput.class

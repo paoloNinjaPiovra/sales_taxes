@@ -1,5 +1,6 @@
 package com.sales.taxes;
 
+import com.sales.taxes.component.ArticleBuilder;
 import com.sales.taxes.component.Calculate;
 import com.sales.taxes.component.FileReader;
 import com.sales.taxes.enums.TaxStatus;
@@ -12,8 +13,7 @@ import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 /**
  * Unit test for simple App.
@@ -119,6 +119,165 @@ public class AppTest
         BigDecimal end = BigDecimal.valueOf(0.60);
 
         assertEquals(start.floatValue(), end.floatValue(), 0);
+    }
+
+    @Test
+    public void testImported() {
+        List<String> list = new ArrayList<>();
+        list.add("1");
+        list.add("imported");
+        list.add("bottle");
+        list.add("of");
+        list.add("wine");
+        Article article = new Article();
+        Boolean imported = article.imported(list);
+        assertTrue(imported);
+    }
+
+    @Test
+    public void testGetAmount() {
+        List<String> list = new ArrayList<>();
+        list.add("1");
+        list.add("imported");
+        list.add("bottle");
+        list.add("of");
+        list.add("wine");
+        Article article = new Article();
+        Integer integer = article.getAmount(list);
+        Integer test = Integer.parseInt("1");
+        assertEquals(integer.intValue(), test.intValue());
+    }
+
+    @Test
+    public void testGetCost() {
+        List<String> list = new ArrayList<>();
+        list.add("1");
+        list.add("imported");
+        list.add("bottle");
+        list.add("of");
+        list.add("wine");
+        list.add("234.45");
+        Article article = new Article();
+        BigDecimal integer = article.getCost(list);
+        BigDecimal test = BigDecimal.valueOf(234.45);
+        assertEquals(integer.floatValue(), test.floatValue(), 0);
+    }
+
+    @Test
+    public void testGetTaxStatusCalculation_TAX_IMPORTED() {
+        Article article = new Article();
+        TaxStatus taxStatus = article.getTaxStatusCalculation(true, true);
+
+        assertEquals(taxStatus, TaxStatus.TAX_IMPORTED);
+    }
+
+    @Test
+    public void testGetTaxStatusCalculation_TAX_NOT_IMPORTED() {
+        Article article = new Article();
+        TaxStatus taxStatus = article.getTaxStatusCalculation(true, false);
+
+        assertEquals(taxStatus, TaxStatus.TAX_NOT_IMPORTED);
+    }
+
+    @Test
+    public void testGetTaxStatusCalculation_NO_TAX_IMPORTED() {
+        Article article = new Article();
+        TaxStatus taxStatus = article.getTaxStatusCalculation(false, true);
+
+        assertEquals(taxStatus, TaxStatus.NO_TAX_IMPORTED);
+    }
+
+    @Test
+    public void testGetTaxStatusCalculation_NO_TAX_NOT_IMPORTED() {
+        Article article = new Article();
+        TaxStatus taxStatus = article.getTaxStatusCalculation(false, false);
+
+        assertEquals(taxStatus, TaxStatus.NO_TAX_NOT_IMPORTED);
+    }
+
+    @Test
+    public void testCreateArticle() {
+        List<String> list = new ArrayList<>();
+        list.add("1");
+        list.add("book");
+        list.add("12.49");
+        Article article = new Article();
+        Article article0 = article.createArticle(list);
+        Article article1 = new Article(1, "book", BigDecimal.valueOf(12.49), BigDecimal.valueOf(0), TaxStatus.NO_TAX_NOT_IMPORTED);
+
+        assertEquals(article0.getAmount().intValue(), article1.getAmount().intValue());
+        assertEquals(article0.getTaxStatus(), article1.getTaxStatus());
+        assertEquals(article0.getDescription(), article1.getDescription());
+        assertEquals(article0.getCost().floatValue(), article1.getCost().floatValue(), 0);
+        assertEquals(article0.getSalesTaxes().floatValue(), article1.getSalesTaxes().floatValue(), 0);
+    }
+
+    @Test
+    public void testArticleBuilder() {
+        ArticleBuilder articleBuilder = new ArticleBuilder();
+        Article article0 = articleBuilder.articleBuilder("1 imported book at 2345.23");
+        Article article1 = new Article(1, "imported book", BigDecimal.valueOf(2345.23), BigDecimal.valueOf(0), TaxStatus.NO_TAX_IMPORTED);
+
+        assertEquals(article0.getAmount().intValue(), article1.getAmount().intValue());
+        assertEquals(article0.getTaxStatus(), article1.getTaxStatus());
+        assertEquals(article0.getDescription(), article1.getDescription());
+        assertEquals(article0.getCost().floatValue(), article1.getCost().floatValue(), 0);
+        assertEquals(article0.getSalesTaxes().floatValue(), article1.getSalesTaxes().floatValue(), 0);
+    }
+
+    @Test
+    public void testRead() {
+        List<Article> output3 = new ArrayList<>();
+        output3.add(new Article(1, "book", BigDecimal.valueOf(12.49), BigDecimal.valueOf(0), TaxStatus.NO_TAX_NOT_IMPORTED));
+        output3.add(new Article(1, "music CD", BigDecimal.valueOf(16.49), BigDecimal.valueOf(1.50), TaxStatus.TAX_NOT_IMPORTED));
+        output3.add(new Article(1, "chocolate bar", BigDecimal.valueOf(0.85), BigDecimal.valueOf(0), TaxStatus.TAX_NOT_IMPORTED));
+        FileReader fileReader = new FileReader();
+        List<Article>  recipeOutput = fileReader.read("input1");
+
+
+        int output1Size = output3.size();
+        int recipeOutputSize = recipeOutput.size();
+        assertEquals(output1Size, recipeOutputSize);
+        Article output3List[] = new Article[output1Size];
+        output3List = output3.toArray(output3List);
+        Article recipeOutputList[] = new Article[recipeOutputSize];
+        recipeOutputList = output3.toArray(recipeOutputList);
+        for (int i = 0; i < recipeOutputSize; i++) {
+            if ((Object) output3List[i] instanceof BigDecimal) {
+                BigDecimal output1ListBd = (BigDecimal) ((Object) output3List[i]);
+                BigDecimal recipeOutputListBd = (BigDecimal) ((Object)recipeOutputList[i]);
+                assertEquals(output1ListBd.floatValue(), recipeOutputListBd.floatValue(), 0);
+            } else
+                assertEquals(output3List[i], recipeOutputList[i]);
+        }
+    }
+
+    @Test
+    public void testScale(){
+        Calculate calculate = new Calculate();
+        BigDecimal number = new BigDecimal(1234.34569999999999999999999);
+        BigDecimal number1 = new BigDecimal(1234.34);
+
+        assertEquals(calculate.scale(number).floatValue(), number1.floatValue(), 0);
+    }
+
+    @Test
+    public void testAdder(){
+        Calculate calculate = new Calculate();
+        BigDecimal number = new BigDecimal(1234.34);
+        BigDecimal number1 = new BigDecimal(1234.34);
+        BigDecimal sum = new BigDecimal(2468.68);
+
+        assertEquals(calculate.scale(calculate.adder(number, number1)).floatValue(), calculate.scale(sum).floatValue(), 0);
+    }
+
+    @Test
+    public void testCalculateSalesTaxes() {
+        Calculate calculate = new Calculate();
+        Article articleOutput = new Article();
+        articleOutput.setCost(BigDecimal.valueOf(11.25));
+
+        assertEquals(BigDecimal.valueOf(0.6).floatValue(), calculate.calculateSalesTaxes(articleOutput, 5).floatValue(), 0);
     }
 
     public RecipeOutput getOutput1() {
