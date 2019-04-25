@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.sales.taxes.AppTest" time="0.089" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.sales.taxes.AppTest" time="0.109" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
     <property name="java.specification.version" value="12"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.class.path" value="/Users/paolofasoli/Projects/sales_taxes/target/test-classes:/Users/paolofasoli/Projects/sales_taxes/target/classes:/Users/paolofasoli/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/paolofasoli/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.javadoc.skip" value="true"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="os.name" value="Mac OS X"/>
@@ -14,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GB"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/paolofasoli/Projects/sales_taxes/target/surefire/surefirebooter11155682265375829858.jar /Users/paolofasoli/Projects/sales_taxes/target/surefire 2019-04-25T18-25-30_355-jvmRun1 surefire10879612082886605200tmp surefire_016942871214100207509tmp"/>
+    <property name="sun.java.command" value="/Users/paolofasoli/Projects/sales_taxes/target/surefire/surefirebooter5555525697495697337.jar /Users/paolofasoli/Projects/sales_taxes/target/surefire 2019-04-25T18-27-44_487-jvmRun1 surefire1419104429981406458tmp surefire_010875132422130142211tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/paolofasoli/Projects/sales_taxes/target/test-classes:/Users/paolofasoli/Projects/sales_taxes/target/classes:/Users/paolofasoli/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/paolofasoli/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
@@ -28,10 +27,10 @@
     <property name="basedir" value="/Users/paolofasoli/Projects/sales_taxes"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
-    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/Users/paolofasoli/Projects/sales_taxes/target/surefire/surefirebooter11155682265375829858.jar"/>
+    <property name="surefire.real.class.path" value="/Users/paolofasoli/Projects/sales_taxes/target/surefire/surefirebooter5555525697495697337.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="12.0.1+12"/>
@@ -41,7 +40,6 @@
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="skipTests" value="false"/>
     <property name="localRepository" value="/Users/paolofasoli/.m2/repository"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="/var/folders/m_/9_mc7dz53152_cpvv625lryr0000gn/T/"/>
@@ -58,8 +56,8 @@
     <property name="java.class.version" value="56.0"/>
   </properties>
   <testcase name="testRound" classname="com.sales.taxes.AppTest" time="0.006"/>
-  <testcase name="testFileReader" classname="com.sales.taxes.AppTest" time="0.01"/>
-  <testcase name="testInput1" classname="com.sales.taxes.AppTest" time="0.006"/>
+  <testcase name="testFileReader" classname="com.sales.taxes.AppTest" time="0.033"/>
+  <testcase name="testInput1" classname="com.sales.taxes.AppTest" time="0.01"/>
   <testcase name="testInput2" classname="com.sales.taxes.AppTest" time="0.001"/>
-  <testcase name="testInput3" classname="com.sales.taxes.AppTest" time="0.003"/>
+  <testcase name="testInput3" classname="com.sales.taxes.AppTest" time="0.005"/>
 </testsuite>
