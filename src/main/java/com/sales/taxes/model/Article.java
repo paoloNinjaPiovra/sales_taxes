@@ -31,16 +31,16 @@ public class Article {
     }
 
     public Article createArticle(List<String> list) {
-        Boolean imported = imported(list);
         Article article = new Article();
+        Boolean imported = isImported(list);
         article.setAmount(getAmount(list));
         article.setCost(getCost(list));
         article.setDescription(getDescription(list, imported));
-        article.setTaxStatus(getTaxStatusCalculation(tax(list) ? Boolean.TRUE : Boolean.FALSE, imported ? Boolean.TRUE : Boolean.FALSE));
+        article.setTaxStatus(calculateTaxStatus(isTax(list), imported));
         return article;
     }
 
-    public TaxStatus getTaxStatusCalculation(Boolean tax, Boolean imported) {
+    public TaxStatus calculateTaxStatus(Boolean tax, Boolean imported) {
         if (tax == true && imported == true) {
             return TaxStatus.TAX_IMPORTED;              //15%
         } else if (tax == true && imported == false) {
@@ -49,6 +49,45 @@ public class Article {
             return TaxStatus.NO_TAX_IMPORTED;           // 5%
         }
         return TaxStatus.NO_TAX_NOT_IMPORTED;           // 0%
+    }
+
+    public Integer getAmount(List<String> list) {
+        return Integer.parseInt(list.get(0));
+    }
+
+    public BigDecimal getCost(List<String> list) {
+        return BigDecimal.valueOf(Double.parseDouble(list.get(list.size() - 1)));
+    }
+
+    public Boolean isImported(List<String> list){
+        if (list.contains("imported"))
+            return Boolean.TRUE;
+        return Boolean.FALSE;
+    }
+
+    public Boolean isTax(List<String> list) {
+        if (Arrays.stream(TaxFree.values())
+                .map(TaxFree::getValue)
+                .anyMatch(list::contains))
+            return Boolean.FALSE;
+        return Boolean.TRUE;
+    }
+
+    public String getDescription(List<String> list, Boolean imported) {
+        final String IMPORTED = "imported";
+        StringBuffer stringBuffer;
+
+        String output = String.join(" ", (list.subList(1, list.size() - 1)));
+        if (imported && output.lastIndexOf(IMPORTED) != 0) {
+            stringBuffer = new StringBuffer();
+            stringBuffer.append(IMPORTED.trim());
+            stringBuffer.append(" ");
+            stringBuffer.append(output.substring(0, output.lastIndexOf(IMPORTED)).trim());
+            stringBuffer.append(" ");
+            stringBuffer.append(output.substring(output.lastIndexOf(IMPORTED) + IMPORTED.length()).trim());
+            return stringBuffer.toString();
+        }
+        return output;
     }
 
     public Integer getAmount() {
@@ -89,44 +128,5 @@ public class Article {
 
     public void setTaxStatus(TaxStatus taxStatus) {
         this.taxStatus = taxStatus;
-    }
-
-    public Integer getAmount(List<String> list) {
-        return Integer.parseInt(list.get(0));
-    }
-
-    public BigDecimal getCost(List<String> list) {
-        return BigDecimal.valueOf(Double.parseDouble(list.get(list.size() - 1)));
-    }
-
-    public Boolean imported(List<String> list){
-        if (list.contains("imported"))
-            return Boolean.TRUE;
-        return Boolean.FALSE;
-    }
-
-    public Boolean tax(List<String> list) {
-        if (Arrays.stream(TaxFree.values())
-                .map(TaxFree::getValue)
-                .anyMatch(list::contains))
-            return Boolean.FALSE;
-        return Boolean.TRUE;
-    }
-
-    public String getDescription(List<String> list, Boolean imported) {
-        final String IMPORTED = "imported";
-        StringBuffer stringBuffer;
-
-        String output = String.join(" ", (list.subList(1, list.size() - 1)));
-        if (imported && output.lastIndexOf(IMPORTED) != 0) {
-            stringBuffer = new StringBuffer();
-            stringBuffer.append(IMPORTED);
-            stringBuffer.append(" ");
-            stringBuffer.append(output.substring(0, output.lastIndexOf(IMPORTED)).trim());
-            stringBuffer.append(" ");
-            stringBuffer.append(output.substring(output.lastIndexOf(IMPORTED) + IMPORTED.length(), output.length()));
-            return stringBuffer.toString();
-        }
-        return output;
     }
 }

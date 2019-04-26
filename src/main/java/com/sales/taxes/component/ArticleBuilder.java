@@ -16,9 +16,10 @@ public class ArticleBuilder {
 
             if (StringUtils.isEmpty(line))
                 throw new SalesTaxesArticleException("No line found");
-
+            //splitto la stringa per ottenere una List di String con gli elementi splittati a ogni spazio
             List<String> list = split(line);
             Article article = new Article();
+            //creo l'oggetto Article a partire dalla List ottenuta
             return article.createArticle(list);
 
         } catch (Exception e) {
@@ -28,6 +29,7 @@ public class ArticleBuilder {
     }
 
     public List<String> split(String line) throws SalesTaxesCalculationException {
+        //splitto la riga per e il carattere di divisione è lo spazio
         List<String> splittedLine = new ArrayList<>(Arrays.asList(line.replace(" at ", " ").split(" ")));
 
         if (null == splittedLine || splittedLine.isEmpty())

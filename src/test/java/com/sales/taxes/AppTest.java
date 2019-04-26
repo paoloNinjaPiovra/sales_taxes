@@ -10,7 +10,6 @@ import com.sales.taxes.model.RecipeOutput;
 import org.junit.Test;
 
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,8 +18,8 @@ import static org.junit.Assert.*;
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-{
+public class AppTest {
+
     @Test
     public void testInput1() throws SalesTaxesCalculationException {
         Calculate calculate = new Calculate();
@@ -131,7 +130,7 @@ public class AppTest
         list.add("of");
         list.add("wine");
         Article article = new Article();
-        Boolean imported = article.imported(list);
+        Boolean imported = article.isImported(list);
         assertTrue(imported);
     }
 
@@ -167,7 +166,7 @@ public class AppTest
     @Test
     public void testGetTaxStatusCalculation_TAX_IMPORTED() {
         Article article = new Article();
-        TaxStatus taxStatus = article.getTaxStatusCalculation(true, true);
+        TaxStatus taxStatus = article.calculateTaxStatus(true, true);
 
         assertEquals(taxStatus, TaxStatus.TAX_IMPORTED);
     }
@@ -175,7 +174,7 @@ public class AppTest
     @Test
     public void testGetTaxStatusCalculation_TAX_NOT_IMPORTED() {
         Article article = new Article();
-        TaxStatus taxStatus = article.getTaxStatusCalculation(true, false);
+        TaxStatus taxStatus = article.calculateTaxStatus(true, false);
 
         assertEquals(taxStatus, TaxStatus.TAX_NOT_IMPORTED);
     }
@@ -183,7 +182,7 @@ public class AppTest
     @Test
     public void testGetTaxStatusCalculation_NO_TAX_IMPORTED() {
         Article article = new Article();
-        TaxStatus taxStatus = article.getTaxStatusCalculation(false, true);
+        TaxStatus taxStatus = article.calculateTaxStatus(false, true);
 
         assertEquals(taxStatus, TaxStatus.NO_TAX_IMPORTED);
     }
@@ -191,7 +190,7 @@ public class AppTest
     @Test
     public void testGetTaxStatusCalculation_NO_TAX_NOT_IMPORTED() {
         Article article = new Article();
-        TaxStatus taxStatus = article.getTaxStatusCalculation(false, false);
+        TaxStatus taxStatus = article.calculateTaxStatus(false, false);
 
         assertEquals(taxStatus, TaxStatus.NO_TAX_NOT_IMPORTED);
     }

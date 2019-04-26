@@ -25,6 +25,7 @@ public class FileReader {
             String line = reader.readLine();
             ArticleBuilder lineParser = new ArticleBuilder();
             while (line != null) {
+                //Scorro riga per riga il file e per ogni riga creo un oggetto di tipo Article
                 aritcles.add(lineParser.articleBuilder(line));
                 line = reader.readLine();
 
