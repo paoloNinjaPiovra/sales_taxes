@@ -4,7 +4,7 @@ public enum TaxFree {
     BOOK("book"),
     CHOCOLATE("chocolate"),
     CHOCOLATES("chocolates"),
-    HEADACHE("headache");
+    PILLS("pills");
 
     private String value;
 
