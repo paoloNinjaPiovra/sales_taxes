@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d3c4973f-483b-47db-a947-9110131df50f" name="Default Changelist" comment="first commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/salesTaxes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/salesTaxes.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sales/taxes/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sales/taxes/App.java" afterDir="false" />
-    </list>
+    <list default="true" id="d3c4973f-483b-47db-a947-9110131df50f" name="Default Changelist" comment="first commit" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,16 +60,17 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resource" />
-      <recent name="$PROJECT_DIR$" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/resources/test" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.sales.taxes.exceptions" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="$PROJECT_DIR$/src/main/resources/test" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
+      <recent name="$PROJECT_DIR$/src/main/resource" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -261,7 +258,7 @@
       <workItem from="1556299461551" duration="23000" />
       <workItem from="1556383175359" duration="26000" />
       <workItem from="1570744797592" duration="43000" />
-      <workItem from="1570863976286" duration="54000" />
+      <workItem from="1570863976286" duration="251000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1556187015501</created>
